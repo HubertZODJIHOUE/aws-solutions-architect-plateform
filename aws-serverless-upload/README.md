@@ -36,7 +36,7 @@ The client uploads the file **directly to S3** using a temporary, scoped URL.
 
 ## Architecture Diagram
 
-![Serverless Upload Architecture](aws-serverless-upload/docs/serveless upload architecture.png)
+![Serverless Upload Architecture](docs/serveless_upload_architecture.png)
 
 ---
 
