@@ -1,4 +1,4 @@
-# TP1 — Serverless File Upload with AWS
+# Serverless File Upload with AWS
 
 ## Description
 
