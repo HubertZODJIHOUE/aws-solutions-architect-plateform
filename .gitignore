@@ -20,3 +20,56 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+
+############################
+# OS
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# IDE / Editors
+############################
+.idea/
+
+*.iml
+
+############################
+# Java / Maven (backend)
+############################
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+
+############################
+# Node / Frontend
+############################
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+############################
+# Logs
+############################
+*.log
+
+############################
+# AWS / Secrets
+############################
+.aws/
+.env
+.env.*
+*.pem
+*.key
+
+############################
+# Temporary files
+############################
+tmp/
+temp/

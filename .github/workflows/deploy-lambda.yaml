@@ -1,0 +1,37 @@
+name: Deploy Lambda Java (backend)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::930665426120:role/github-actions-lambda-deployer
+          aws-region: us-east-1
+
+      - name: Build Lambda (backend)
+        working-directory: backend
+        run: mvn clean package
+
+      - name: Deploy Lambda
+        working-directory: backend
+        run: |
+          aws lambda update-function-code \
+            --function-name upload-presign-java \
+            --zip-file fileb://target/lambda-java-1.1.jar
