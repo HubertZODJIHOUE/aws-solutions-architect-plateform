@@ -26,7 +26,6 @@ public class Handler implements RequestHandler<Map<String, Object>, Map<String, 
                     .key(key)
                     .contentType("text/plain")
                     .build();
-
             PutObjectPresignRequest presignRequest =
                     PutObjectPresignRequest.builder()
                             .signatureDuration(Duration.ofMinutes(5))
