@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "backend/**"
+      - "aws-serverless-upload/backend/**"
 
 permissions:
   id-token: write

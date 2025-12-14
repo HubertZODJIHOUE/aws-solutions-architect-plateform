@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/aws-serverless-java-architecture.iml" filepath="$PROJECT_DIR$/.idea/aws-serverless-java-architecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/aws-solutions-architect-plateform.iml" filepath="$PROJECT_DIR$/.idea/aws-solutions-architect-plateform.iml" />
     </modules>
   </component>
 </project>
