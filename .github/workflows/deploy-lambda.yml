@@ -26,11 +26,11 @@ jobs:
           aws-region: us-east-1
 
       - name: Build Lambda (backend)
-        working-directory: backend
+        working-directory: aws-serverless-upload/backend
         run: mvn clean package
 
       - name: Deploy Lambda
-        working-directory: backend
+        working-directory: aws-serverless-upload/backend
         run: |
           aws lambda update-function-code \
             --function-name upload-presign-java \
