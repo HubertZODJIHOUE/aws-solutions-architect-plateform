@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - "front/fileupload/**"
+      - "aws-serverless-upload/frontend/fileupload/**"
 
 permissions:
   id-token: write
@@ -15,7 +15,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: front/fileupload
+        working-directory: aws-serverless-upload/frontend/fileupload
 
     steps:
       - name: Checkout code
@@ -39,8 +39,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy to S3 (ONLY browser content)
-        run: |
-          aws s3 sync dist/fileupload/browser/ s3://serveless-frontend-prod --delete
+        run: aws s3 sync dist/fileupload/browser/ s3://serveless-frontend-prod --delete
 
       - name: Invalidate CloudFront
         run: |
