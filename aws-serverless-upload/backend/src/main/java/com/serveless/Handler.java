@@ -18,7 +18,6 @@ public class Handler implements RequestHandler<Map<String, Object>, Map<String, 
         String filename = "test.txt";
         String key = "uploads/" + LocalDate.now() + "/" + filename;
         try (S3Presigner presigner = S3Presigner.create()) {
-
             PutObjectRequest putRequest = PutObjectRequest.builder()
                     .bucket(BUCKET)
                     .key(key)
